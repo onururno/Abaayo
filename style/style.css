@@ -164,12 +164,37 @@ header{
     position: relative;
 }
 
+.add-background{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    transition: all 0.2s linear;
+}
+
+.linkColor{
+    color: #5c1916;
+    transition: all 0.2s linear;
+}
+
+.sticky{
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    transition: all 0.2s linear;
+}
+
 .nav-content{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    padding-top: 50px;
+    min-height: 120px;
 }
 
 .nav-content img{
@@ -178,7 +203,6 @@ header{
 
 nav ul{
     display: flex;
-    color: white;
 }
 
 nav li{
@@ -189,12 +213,14 @@ nav li{
 
 .header-img-content{
     text-align: center;
+    padding-top: 250px;
 }
 
 .header-img-content img{
     height: 240px;
     margin: 0 auto;
     margin-bottom: 40px;
+    
 }
 
 .header-img-content h5{
