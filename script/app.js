@@ -3,7 +3,7 @@ const links = sticky.querySelectorAll("a");
 const logo = document.getElementById("logo-img");
 
 window.onscroll = function() {myFunction()};
-// change bg-color, color and logo if you scroll down
+// change navbar's bg-color, color and logo if you scroll down
 function myFunction() {
   if (document.documentElement.scrollTop > 5) {
         sticky.className = "add-background";

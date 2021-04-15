@@ -37,7 +37,23 @@ p.text1{
     font-weight: 400;
 }
 
+h2{
+    font-size: 56px;
+    color: #5c1916;
+    line-height: 70px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
 p.text2{
+    color: #5c1916 ;
+    font-size: 28px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+h3{
     color: #5c1916 ;
     font-size: 28px;
     font-family: 'Roboto Slab', serif;
@@ -110,18 +126,21 @@ a{
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 50px;
+    box-sizing: content-box;
 }
 
 .medium-width{
     max-width: 1080px;
     margin: 0 auto;
     padding: 0 50px;
+    box-sizing: content-box;
 }
 
 .small-width{
     max-width: 934px;
     margin: 0  auto;
     padding: 0 50px;
+    box-sizing: content-box;
 }
 
 /* MARGIN */
@@ -267,7 +286,6 @@ nav li{
 }
 
 .willkommen-img{
-    height: 430px;
     overflow: hidden;
     position: relative;
 }
@@ -275,8 +293,6 @@ nav li{
 .willkommen-img img{
     width: 100%;
 }
-
-
 
 
 /* DOLMETSCH -------------------------------------------------*/
@@ -326,6 +342,17 @@ nav li{
     max-width: 830px;
 }
 
+@media screen and (max-width: 980px) {
+    .cart-row{
+        justify-content: center;
+    }
+    .cart{
+        margin: 5px;
+    }
+    .cart:nth-child(1), .cart:nth-child(4){
+        margin-bottom: 0;
+    }
+}
 
 /* SPRACH ---------------------------------------------------*/
 .sprachvermittlung{
@@ -356,8 +383,7 @@ nav li{
     justify-content: space-between;
 }
 
-
-.sprach-content p:nth-child(1){
+.sprach-content h3:nth-child(1){
     max-width: 440px;
 }
 
@@ -375,12 +401,23 @@ nav li{
     margin-top: 35px;
 }
 
+@media screen and (max-width: 990px) {
+    .big-sprach-content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .frau-content{
+        margin-bottom: 50px;
+    }
+}
+
 /* KONTAKT ------------------------------------------------------*/
 .kontakt-content img{
     margin-top: 60px;
 }
 
-.kontakt p.text2{
+.kontakt h3{
     text-align: center;
     max-width: 620px;
     margin: 0 auto;
@@ -393,7 +430,6 @@ nav li{
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
 .btn button{
@@ -422,7 +458,7 @@ nav li{
     top: 57%;
     left: 50%;
     transform: translate(-50%, -57%);
-    max-width: 450px;
+    max-width: 460px;
 }
 
 /* VIELFALT ------------------------------------------------*/
@@ -433,18 +469,20 @@ nav li{
     margin-bottom: 60px;
 }
 
-.vielfalt p.text1{
+.vielfalt h2{
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 }
 
 .vielfalt-img{
     background-color: #f7f3ef;
+    box-sizing: border-box;
 }
 
 .vielfalt-img img{
-    height: 690px;
+    max-width: 450px;
+    width: 100%;
     margin: 0 auto;
     padding: 40px 0;
 }
@@ -457,22 +495,32 @@ nav li{
 }
 
 ul.list-row1, ul.list-row2{
-    list-style-type: square;
-    list-style-position: inside;
+    list-style: none;
     padding-left: 0;
 }
 
+.list-row1{
+    margin-left: 30px;
+}
+
 .list-row2{
-    margin-left: 120px;
+    margin-left: 190px;
 }
 
 .list-row2, .list-row1{
 margin-top: 0;
 }
 
-ul.list-row1 li::marker ,ul.list-row2 li::marker{
-    color: #c08845;
-    font-size: 35px;
+ul.list-row1 > li::before,
+ul.list-row2 > li::before {
+    content: '';
+    position: absolute;
+    top: 0.5em;
+    left: -30px;
+    width: 1rem;
+    height: 1rem;
+    background: #c08845; 
+    transform: translateY(-25%);
 }
 
 .vielfalt-list li{
@@ -480,27 +528,17 @@ ul.list-row1 li::marker ,ul.list-row2 li::marker{
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .vielfalt-list .list-row1 li:nth-child(2),
-.vielfalt-list .list-row2 li:nth-child(10){
+.vielfalt-list .list-row2 li:nth-child(11){
     margin-bottom: 40px;
 }
 
-.vielfalt .li-child{
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    list-style-type: none;
-    padding: 0;
+.vielfalt-list p{
     margin-bottom: 40px;
     margin-top: 10px;
-    margin-left: 40px;
-}
-
-.vielfalt .vielfalt-list .li-child li{
-    font-size: 16px;
-    margin-bottom: 3px;
 }
 
 .vielfalt-list .list-row1 li:nth-last-child(1) .li-child{
@@ -515,11 +553,22 @@ ul.list-row1 li::marker ,ul.list-row2 li::marker{
     max-width: 100%;
 }
 
+@media screen and (max-width: 760px){
+    .vielfalt-list{
+        flex-wrap: wrap;
+        overflow: scroll;
+        height: 500px;
+    }
+    .list-row2, .list-row1{
+        margin-left: 0;
+    }
+}
+
 /* KULTUREN -----------------------------------------------*/
-.kulturen p.text1{
+.kulturen h2{
     text-align: center;
     margin: 0 0 0 35px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     max-width: 780px;
 }
 
@@ -530,8 +579,8 @@ ul.list-row1 li::marker ,ul.list-row2 li::marker{
 .kulturen-text-img{
     width: 360px;
     float: right;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-left: 30px;
 }
 
 
@@ -576,6 +625,25 @@ ul.list-row1 li::marker ,ul.list-row2 li::marker{
     font-family: 'Roboto Slab', serif;
 }
 
+@media screen and (max-width: 870px) {
+    .cart-kult:nth-child(2), .cart-kult:nth-child(1){
+       margin-bottom: 10px;
+       justify-content: center;
+     }
+}
+
+@media screen and (max-width: 750px) {
+    .kulturen-text-img{
+        /* float: none;
+        margin-left: 0;
+        margin: 0 auto;
+        margin-bottom: 20px; */
+        width: 250px;
+    }
+}
+
+
+
 /* REF -------------------------------------------------------*/
 .ref{
     background-color: #f7f3ef;
@@ -586,7 +654,7 @@ ul.list-row1 li::marker ,ul.list-row2 li::marker{
     padding-top: 60px;
 }
 
-.ref-content p.text2{
+.ref-content h3{
     margin-bottom: 35px;
 }
 
