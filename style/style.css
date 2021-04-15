@@ -174,6 +174,20 @@ nav ul{
     font-family: 'Roboto Slab', serif;
 }
 
+@media screen and (max-width: 425px) {
+    .big-width{
+        padding: 0 10px;
+    }
+    
+    .medium-width{
+        padding: 0 10px;
+    }
+    
+    .small-width{
+        padding: 0 10px;
+    }
+}
+
 /* HEADER -------------------------------------------------*/
 header{
     background-image: url(../img/Abaayo_Header.jpg);
@@ -469,6 +483,8 @@ nav li{
     margin-bottom: 60px;
 }
 
+
+
 .vielfalt h2{
     text-align: center;
     margin: 0 auto;
@@ -508,7 +524,7 @@ ul.list-row1, ul.list-row2{
 }
 
 .list-row2, .list-row1{
-margin-top: 0;
+    margin-top: 0;
 }
 
 ul.list-row1 > li::before,
@@ -558,6 +574,8 @@ ul.list-row2 > li::before {
         flex-wrap: wrap;
         overflow: scroll;
         height: 500px;
+        border-bottom: 1px solid #5c1916;
+        border-top: 1px solid #5c1916;
     }
     .list-row2, .list-row1{
         margin-left: 0;
@@ -639,6 +657,15 @@ ul.list-row2 > li::before {
         margin: 0 auto;
         margin-bottom: 20px; */
         width: 250px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .kulturen-text-img{
+        float: none;
+        margin-left: 0;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
 }
 
